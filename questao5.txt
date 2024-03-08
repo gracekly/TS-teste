@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+void inverterString(char vet[]) {
+
+  int tam = strlen(vet);
+  int i, aux, fim;
+
+  fim = tam - 1; 
+
+  for (i = 0; i < tam / 2; i++) {
+
+    aux = vet[i];
+    vet[i] = vet[fim];
+    vet[fim] = aux;
+
+    fim--;
+  }
+}
+
+int main() {
+  char nome[30] = ("quero esta vaga!");
+
+  
+  inverterString(nome);
+  printf("%s", nome);
+
+  return 0;
+}

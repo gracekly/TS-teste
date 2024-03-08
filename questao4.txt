@@ -1,0 +1,30 @@
+import java.text.DecimalFormat;
+
+public class Main {
+  public static void main(String[] args) {
+    double SP = 67836.43;
+    double RJ = 36678.66;
+    double MG = 29229.88;
+    double ES = 27165.48;
+    double OTHERS = 19849.53;
+
+    double total = SP + RJ + MG + ES + OTHERS;
+
+    double per_SP = (SP/total) *100;
+    double per_RJ = (RJ/total) *100;
+    double per_MG = (MG/total) *100;
+    double per_ES = (ES/total) *100;
+    double per_OTHERS = (OTHERS/total) *100;
+
+     DecimalFormat df = new DecimalFormat("0.00");
+    
+    System.out.println("------ Percentual total mensal de cada estado ------");
+    System.out.println("SP: " + df.format(per_SP) + "%");
+    System.out.println("RJ: " + df.format(per_RJ) + "%");
+    System.out.println("MG: " +df.format( per_MG) + "%");
+    System.out.println("ES: " + df.format(per_ES) + "%");
+    System.out.println("Outros: " + df.format(per_OTHERS) + "%");
+  }
+
+
+}
